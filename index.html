@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Price Calculation</h1>
+        <label for="product">Select Product:</label>
+        <select id="product" name="product" onchange="updatePrice()">
+            <option value="apple" data-price="1.5">Apple ($1.50)</option>
+            <option value="banana" data-price="0.8">Banana ($0.80)</option>
+            <option value="orange" data-price="1.2">Orange ($1.20)</option>
+            <option value="grapes" data-price="2.5">Grapes ($2.50)</option>
+        </select>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" oninput="calculateTotal()">
+        <label for="price">Unit Price ($):</label>
+        <input type="number" id="price" name="price" value="1.5" readonly>
+        <div class="total">
+            <h2>Total: $<span id="totalAmount"></span></h2>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
